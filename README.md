@@ -24,7 +24,8 @@ JavaScript ファイルの名称は style.js をデフォルトとする。他�
 
 ## 規定
 1. style.js は、L.TileLayer.GeoJSON のコンストラクタの第二引数 options 及び第三引数 geojsonOptions をそれぞれその名前を持つプロパティとして格納したものとする。
-2. 但し、layers-dot-json-spec に基づく layers.json の規定は、style.js の定義を上書きするものとする。
+2. 第二引数 optionsにはベクトルタイルの描画方法を指定するoption（styletype）を記述できるものとする。（canvasを指定する場合　styletype:"canvas"）
+3. 但し、layers-dot-json-spec に基づく layers.json の規定は、style.js の定義を上書きするものとする。
 
 ## サンプル
 ```javascript
@@ -49,6 +50,11 @@ geojsonOptions:
 
 ## その他の規約
 + ファイルの文字コードはUTF-8とし、Unicodeエスケープは行わない。
+
+## 変更履歴
+|日付      |内容      |
+|:---------|:---------|
+|2017-03-07|規定にoption（styletype）の記述を追加。|
 
 ## 参考文献
 1. L.TileLayer.GeoJSON
